@@ -1,1 +1,1 @@
-# Freshwater-Quality-Prediciton-using-oneAPI
+# Freshwater-Quality-Prediction-using-oneAPI
