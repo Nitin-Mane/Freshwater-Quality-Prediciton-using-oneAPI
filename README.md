@@ -21,10 +21,12 @@ Clone the repository:
 
 
 Copy code
+```
 git clone https://github.com/<your-username>/Freshwater-Quality-Prediction-using-oneAPI.git
+```
 cd Freshwater-Quality-Prediction-using-oneAPI
-Install the required packages:
 
+Install the required packages:
 
 sh
 Copy code
