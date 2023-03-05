@@ -40,7 +40,6 @@ cd Freshwater-Quality-Prediction-using-oneAPI
 Install the required packages:
 
 ```
-Copy code
 pip install -r requirements.txt
 ```
 Prepare the dataset:
