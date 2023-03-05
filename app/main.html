@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Freshwater Quality Predictor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Freshwater Quality Predictor</h1>
+    <form>
+        <label for="date">Select date:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="time">Select time of day:</label>
+        <input type="range" id="time" name="time" min="0" max="23" step="1"><br><br>
+
+        <label for="pH">pH:</label>
+        <meter id="pH" name="pH" min="0" max="14" value="7"></meter><br>
+
+        <label for="iron">Iron:</label>
+        <input type="range" id="iron" name="iron" min="0" max="10" step="0.1"><br>
+
+        <label for="nitrate">Nitrate:</label>
+        <input type="range" id="nitrate" name="nitrate" min="0" max="50" step="0.1"><br>
+
+        <label for="chloride">Chloride:</label>
+        <meter id="chloride" name="chloride" min="0" max="500" value="250"></meter><br>
+
+        <label for="lead">Lead:</label>
+        <input type="range" id="lead" name="lead" min="0" max="5" step="0.1"><br>
+
+        <label for="zinc">Zinc:</label>
+        <input type="range" id="zinc" name="zinc" min="0" max="10" step="0.1"><br>
+
+        <label for="color">Color:</label>
+        <input type="range" id="color" name="color" min="0" max="5" step="1"><br>
+
+        <label for="turbidity">Turbidity:</label>
+        <input type="range" id="turbidity" name="turbidity" min="0" max="100" step="0.1"><br>
+
+        <label for="fluoride">Fluoride:</label>
+        <input type="range" id="fluoride" name="fluoride" min="0" max="5" step="0.1"><br>
+
+        <label for="copper">Copper:</label>
+        <input type="range" id="copper" name="copper" min="0" max="10" step="0.1"><br>
+
+        <label for="odor">Odor:</label>
+        <input type="range" id="odor" name="odor" min="0" max="10" step="0.1"><br>
+
+        <label for="sulfate">Sulfate:</label>
+        <input type="range" id="sulfate" name="sulfate" min="0" max="500" step="1"><br>
+
+        <input type="range" id="conductivity" name="conductivity" min="0" max="5000" step="0.1"
+            onchange="updateValue(this.id, this.value)">
+        <span id="conductivityValue" class="sliderValue">0</span>
+        </div>
+        <!-- Chlorine input -->
+        <div class="inputContainer">
+            <label for="chlorine">Chlorine:</label>
+            <input type="range" id="chlorine" name="chlorine" min="0" max="10" step="0.01"
+                onchange="updateValue(this.id, this.value)">
+            <span id="chlorineValue" class="sliderValue">0</span>
+        </div>
+        <!-- Manganese input -->
+        <div class="inputContainer">
+            <label for="manganese">Manganese:</label>
+            <input type="range" id="manganese" name="manganese" min="0" max="5" step="0.01"
+                onchange="updateValue(this.id, this.value)">
+            <span id="manganeseValue" class="sliderValue">0</span>
+        </div>
+        <!-- Total Dissolved Solids input -->
+        <div class="inputContainer">
+            <label for="tds">Total Dissolved Solids:</label>
+            <input type="range" id="tds" name="tds" min="0" max="5000" step="0.1"
+                onchange="updateValue(this.id, this.value)">
+            <span id="tdsValue" class="sliderValue">0</span>
+        </div>
+        <!-- Water Source input -->
+        <div class="inputContainer">
+            <label for="waterSource">Water Source:</label>
+            <select id="waterSource" name="waterSource">
+                <option value="Surface">Surface Water</option>
+                <option value="Ground">Ground Water</option>
+                <option value="Mixed">Mixed Water</option>
+            </select>
+        </div>
+        <!-- Water Temperature input -->
+        <div class="inputContainer">
+            <label for="waterTemp">Water Temperature:</label>
+            <input type="range" id="waterTemp" name="waterTemp" min="0" max="100" step="0.1"
+                onchange="updateValue(this.id, this.value)">
+            <span id="waterTempValue" class="sliderValue">0</span>
+        </div>
+        <!-- Air Temperature input -->
+        <div class="inputContainer">
+            <label for="airTemp">Air Temperature:</label>
+            <input type="range" id="airTemp" name="airTemp" min="-50" max="50" step="0.1"
+                onchange="updateValue(this.id, this.value)">
+            <span id="airTempValue" class="sliderValue">0</span>
+        </div>
+        <!-- Month input -->
+        <div class="inputContainer">
+            <label for="month">Month:</label>
+            <input type="month" id="month" name="month" onchange="updateValue(this.id, this.value)">
+        </div>
+        <!-- Day input -->
+        <div class="inputContainer">
+            <label for="day">Day:</label>
+            <input type="number" id="day" name="day" min="1" max="31" onchange="updateValue(this.id, this.value)">
+        </div>
+        <!-- Time of Day input -->
+        <div class="inputContainer">
+            <label for="timeOfDay">Time of Day:</label>
+            <input type="range" id="timeOfDay" name="timeOfDay" min="0" max="23" step="1"
+                onchange="updateValue(this.id, this.value)">
+            <span id="timeOfDayValue" class="sliderValue">0</span>
+        </div>
+        <!-- Submit button -->
+        <div class="submitButtonContainer">
+            <button type="submit" class="submitButton">Predict</button>
+        </div>
+    </form>

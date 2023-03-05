@@ -1,0 +1,7 @@
+modin
+xgboost=1.7.4
+wget
+statsmodels
+dpcpp-cpp-rt
+imbalanced-learn
+

@@ -1,0 +1,340 @@
+/* Main container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Input fields */
+input[type="number"],
+input[type="range"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Button styling */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* Gauge styling */
+.gauge {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.gauge .fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.gauge .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  line-height: 200px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+/* Slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 5px;
+  background-color: #ddd;
+  outline: none;
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+/* Calendar styling */
+.calendar {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calendar .datepicker {
+  display: inline-block;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar .datepicker-inline {
+  display: inline-block;
+  border: none;
+}
+
+.calendar .datepicker-days {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.calendar .datepicker-months,
+.calendar .datepicker-years {
+  display: none;
+}
+
+.calendar .prev,
+.calendar .next {
+cursor: pointer;
+padding: 5px;
+border-radius: 50%;
+background-color: #fff;
+box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.calendar .prev:hover,
+.calendar .next:hover {
+background-color: #e6e6e6;
+}
+
+.calendar .prev {
+float: left;
+}
+
+.calendar .next {
+float: right;
+}
+
+.calendar table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.calendar th {
+height: 40px;
+text-align: center;
+font-weight: bold;
+font-size: 16px;
+color: #333;
+border: 1px solid #ccc;
+}
+
+.calendar td {
+height: 60px;
+text-align: center;
+vertical-align: middle;
+font-size: 16px;
+color: #666;
+border: 1px solid #ccc;
+background-color: #f9f9f9;
+}
+
+.calendar td:hover {
+background-color: #e6e6e6;
+cursor: pointer;
+}
+
+.calendar .today {
+background-color: #3399ff;
+color: #fff;
+}
+
+.gauge-meter {
+position: relative;
+display: inline-block;
+width: 150px;
+height: 150px;
+margin-right: 20px;
+}
+
+.gauge-meter .dial {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+background-color: #f2f2f2;
+z-index: 1;
+}
+
+.gauge-meter .dial::before {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80%;
+height: 80%;
+border-radius: 50%;
+background-color: #fff;
+box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.gauge-meter .dial::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 70%;
+height: 70%;
+border-radius: 50%;
+background-color: #f2f2f2;
+z-index: 2;
+}
+
+.gauge-meter .bar {
+position: absolute;
+top: 50%;
+left: 50%;
+transform-origin: center;
+width: 60%;
+height: 6px;
+background-color: #3399ff;
+border-radius: 4px;
+z-index: 3;
+}
+
+.gauge-meter .label {
+position: absolute;
+bottom: -20px;
+left: 50%;
+transform: translateX(-50%);
+font-size: 14px;
+color: #666;
+}
+
+.slider-container {
+display: flex;
+align-items: center;
+margin-top: 20px;
+}
+
+.slider-container label {
+font-size: 16px;
+color: #333;
+margin-right: 20px;
+}
+
+.slider {
+-webkit-appearance: none;
+width: 80%;
+height: 6px;
+background-color: #f2f2f2;
+outline: none;
+border-radius: 4px;
+margin-right: 20px;
+}
+
+.slider {
+  -webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 5px;
+    }
+    
+    .slider::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 5px;
+    }
+    
+    .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+    margin-top: -6px;
+    }
+    
+    .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+    }
+    
+    .btn {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    
+    .btn:hover {
+    background-color: #3e8e41;
+    }
